@@ -73,6 +73,15 @@ const Header = () => {
               <button
                 onClick={() => scrollToSection('contact')}
                 className="bg-cta-yellow text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-200 transform hover:scale-105 shadow-lg ml-4"
+                style={{ 
+                  backgroundColor: '#EDBF43', 
+                  color: '#1F3440', 
+                  fontWeight: '600', 
+                  border: 'none',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                  cursor: 'pointer'
+                }}
               >
                 Get a Quote
               </button>

@@ -379,3 +379,45 @@ nav button:hover {
   .lg\:order-2 { order: 2; }
   .lg\:col-span-2 { grid-column: span 2 / span 2; }
 }
+
+/* Button Styling - Force visibility */
+button {
+  color: inherit !important;
+  font-family: inherit !important;
+  cursor: pointer !important;
+}
+
+/* Navigation specific buttons */
+nav button {
+  color: white !important;
+  font-weight: 500 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+nav button:hover {
+  color: #25BDB0 !important;
+}
+
+/* CTA Buttons - Force yellow background */
+.bg-cta-yellow,
+button[style*="background-color: #EDBF43"],
+button[style*="backgroundColor: #EDBF43"] {
+  background-color: #EDBF43 !important;
+  color: #1F3440 !important;
+  font-weight: 600 !important;
+  border: none !important;
+}
+
+/* Header buttons specifically */
+header button {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+header button.bg-cta-yellow,
+header button[style*="backgroundColor: #EDBF43"] {
+  background-color: #EDBF43 !important;
+  color: #1F3440 !important;
+  font-weight: 600 !important;
+}
