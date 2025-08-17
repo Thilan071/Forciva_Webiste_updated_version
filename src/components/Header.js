@@ -43,24 +43,28 @@ const Header = () => {
               <button
                 onClick={() => scrollToSection('services')}
                 className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
+                style={{ color: 'white', fontWeight: '500', backgroundColor: 'transparent', border: 'none' }}
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
+                style={{ color: 'white', fontWeight: '500', backgroundColor: 'transparent', border: 'none' }}
               >
                 About Us
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
                 className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
+                style={{ color: 'white', fontWeight: '500', backgroundColor: 'transparent', border: 'none' }}
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
+                style={{ color: 'white', fontWeight: '500', backgroundColor: 'transparent', border: 'none' }}
               >
                 Contact
               </button>

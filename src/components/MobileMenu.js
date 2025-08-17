@@ -41,24 +41,28 @@ const MobileMenu = ({ isOpen, onClose }) => {
               <button
                 onClick={() => scrollToSection('services')}
                 className="block w-full text-left text-white hover:text-primary-accent py-3 text-lg transition-colors duration-200"
+                style={{ color: 'white', fontWeight: '500', textAlign: 'left', backgroundColor: 'transparent', border: 'none' }}
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left text-white hover:text-primary-accent py-3 text-lg transition-colors duration-200"
+                style={{ color: 'white', fontWeight: '500', textAlign: 'left', backgroundColor: 'transparent', border: 'none' }}
               >
                 About Us
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
                 className="block w-full text-left text-white hover:text-primary-accent py-3 text-lg transition-colors duration-200"
+                style={{ color: 'white', fontWeight: '500', textAlign: 'left', backgroundColor: 'transparent', border: 'none' }}
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left text-white hover:text-primary-accent py-3 text-lg transition-colors duration-200"
+                style={{ color: 'white', fontWeight: '500', textAlign: 'left', backgroundColor: 'transparent', border: 'none' }}
               >
                 Contact
               </button>
@@ -69,6 +73,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
               <button
                 onClick={() => scrollToSection('contact')}
                 className="w-full bg-cta-yellow text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200"
+                style={{ backgroundColor: '#EDBF43', color: '#1F3440', fontWeight: '600', border: 'none' }}
               >
                 Get a Quote
               </button>

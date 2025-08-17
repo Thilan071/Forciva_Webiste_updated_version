@@ -193,14 +193,31 @@ code {
 .bg-transparent { background-color: transparent; }
 
 /* Colors - Text */
-.text-white { color: white !important; }
-.text-primary-dark { color: var(--primary-dark); }
-.text-primary-accent { color: var(--primary-accent); }
-.text-secondary-accent { color: var(--secondary-accent); }
+.text-white { 
+  color: white !important; 
+  font-weight: 500 !important;
+}
+.text-primary-dark { color: var(--primary-dark) !important; }
+.text-primary-accent { color: var(--primary-accent) !important; }
+.text-secondary-accent { color: var(--secondary-accent) !important; }
 .text-gray-300 { color: var(--gray-300); }
 .text-gray-400 { color: var(--gray-400); }
 .text-gray-600 { color: var(--gray-600); }
 .text-gray-700 { color: var(--gray-700); }
+
+/* Navigation specific styles */
+nav button {
+  color: white !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+nav button:hover {
+  color: var(--primary-accent) !important;
+}
 
 /* Border */
 .border { border-width: 1px; }
