@@ -424,19 +424,19 @@ header button[style*="backgroundColor: #EDBF43"] {
 
 /* Logo sizing for better visibility - both logos same size */
 .logo-primary {
-  height: 4rem; /* 64px */
+  height: 6rem; /* 96px - increased from 64px */
   width: auto;
 }
 
 /* Responsive logo sizing - both logos same size */
 @media (max-width: 768px) {
   .logo-primary {
-    height: 3rem; /* 48px on mobile */
+    height: 5rem; /* 80px on mobile - increased from 48px */
   }
 }
 
 @media (max-width: 480px) {
   .logo-primary {
-    height: 2.5rem; /* 40px on small mobile */
+    height: 4rem; /* 64px on small mobile - increased from 40px */
   }
 }

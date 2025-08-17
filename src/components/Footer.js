@@ -14,8 +14,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={logo} alt="Forciva Logo" className="h-10 w-auto" />
-              <img src={companyName} alt="Forciva" className="h-8 w-auto" />
+              <img src={logo} alt="Forciva Logo" className="logo-primary" />
+              <img src={companyName} alt="Forciva" className="logo-primary" />
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               Innovative software solutions for a digital world. We deliver robust, scalable, 
