@@ -27,13 +27,13 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-6">
-        <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+      <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 sm:px-6">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-snug sm:leading-tight">
           Innovative Software Solutions for a{' '}
           <span className="text-primary-accent">Digital World</span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
           Forciva delivers robust, scalable, and professional software engineered to solve your biggest challenges.
         </p>
 
