@@ -25,13 +25,13 @@ const Header = () => {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary-dark/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-primary-dark backdrop-blur-md shadow-lg' : 'bg-primary-dark/90 backdrop-blur-sm'
       }`}>
-        <nav className="container mx-auto px-6 py-4">
+        <nav className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <div 
-              className="flex items-center space-x-3 cursor-pointer"
+              className="flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity duration-200"
               onClick={() => scrollToSection('hero')}
             >
               <img src={logo} alt="Forciva Logo" className="h-10 w-auto" />
@@ -42,25 +42,25 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection('services')}
-                className="text-white hover:text-primary-accent transition-colors duration-200"
+                className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-white hover:text-primary-accent transition-colors duration-200"
+                className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
               >
                 About Us
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="text-white hover:text-primary-accent transition-colors duration-200"
+                className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Our Work
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-white hover:text-primary-accent transition-colors duration-200"
+                className="text-white hover:text-primary-accent transition-colors duration-200 font-medium text-lg px-3 py-2 rounded-md hover:bg-white/10"
               >
                 Contact
               </button>
@@ -68,7 +68,7 @@ const Header = () => {
               {/* CTA Button */}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-cta-yellow text-primary-dark px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200"
+                className="bg-cta-yellow text-primary-dark px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-200 transform hover:scale-105 shadow-lg ml-4"
               >
                 Get a Quote
               </button>
@@ -78,7 +78,7 @@ const Header = () => {
             <div className="md:hidden">
               <button 
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="text-white"
+                className="text-white hover:text-primary-accent transition-colors duration-200 p-2 rounded-md hover:bg-white/10"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
