@@ -35,7 +35,7 @@ const Header = () => {
               onClick={() => scrollToSection('hero')}
             >
               <img src={logo} alt="Forciva Logo" className="logo-primary" />
-              <img src={companyName} alt="Forciva" className="logo-primary" />
+              <img src={companyName} alt="Forciva" className="company-name-primary" />
             </div>
 
             {/* Navigation Links */}

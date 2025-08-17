@@ -116,6 +116,7 @@ code {
 .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
 .pt-4 { padding-top: 1rem; }
 .pt-8 { padding-top: 2rem; }
+.pt-20 { padding-top: 5rem; }
 .pb-8 { padding-bottom: 2rem; }
 
 /* Margin classes */
@@ -437,22 +438,49 @@ header button[style*="backgroundColor: #EDBF43"] {
   font-weight: 600 !important;
 }
 
-/* Logo sizing for better visibility - both logos same size */
+/* Logo sizing for better visibility */
 .logo-primary {
-  height: 6rem; /* 96px - increased from 64px */
+  height: 6rem; /* 96px - company logo */
   width: auto;
 }
 
-/* Responsive logo sizing - both logos same size */
+/* Company name image - much bigger for better visibility */
+.company-name-primary {
+  height: 8rem; /* 128px - much bigger as requested */
+  width: auto;
+}
+
+/* Header adjustments for larger company name */
+header nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Responsive logo sizing */
 @media (max-width: 768px) {
   .logo-primary {
-    height: 5rem; /* 80px on mobile - increased from 48px */
+    height: 5rem; /* 80px on mobile */
+  }
+  
+  .company-name-primary {
+    height: 6.5rem; /* 104px on mobile */
   }
 }
 
 @media (max-width: 480px) {
   .logo-primary {
-    height: 4rem; /* 64px on small mobile - increased from 40px */
+    height: 4rem; /* 64px on small mobile */
+  }
+  
+  .company-name-primary {
+    height: 5rem; /* 80px on small mobile */
   }
 }
 
@@ -467,15 +495,45 @@ header button[style*="backgroundColor: #EDBF43"] {
 
 /* Mobile text adjustments for hero title */
 @media (max-width: 640px) {
+  #hero {
+    align-items: flex-start !important;
+    padding-top: 6rem !important;
+  }
+  
   #hero h1 {
     font-size: 2.25rem !important; /* 36px */
     line-height: 1.2 !important;
     word-break: break-word;
     overflow-wrap: break-word;
     padding: 0 1rem;
+    margin-top: 2rem !important;
   }
   
   #hero .relative.z-20 {
-    padding-top: 2rem;
+    padding-top: 4rem !important;
+    margin-top: 2rem;
+  }
+  
+  #hero p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  #hero {
+    padding-top: 8rem !important;
+  }
+  
+  #hero .relative.z-20 {
+    padding-top: 6rem !important;
+    margin-top: 3rem;
+  }
+  
+  #hero h1 {
+    font-size: 2rem !important; /* 32px */
+    margin-top: 3rem !important;
   }
 }

@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden md:items-center">
       {/* Background Video */}
       <video
         autoPlay
@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 sm:px-6 pt-20 sm:pt-0">
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-snug sm:leading-tight">
           Innovative Software Solutions for a{' '}
           <span className="text-primary-accent">Digital World</span>
