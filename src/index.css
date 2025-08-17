@@ -421,3 +421,22 @@ header button[style*="backgroundColor: #EDBF43"] {
   color: #1F3440 !important;
   font-weight: 600 !important;
 }
+
+/* Logo sizing for better visibility - both logos same size */
+.logo-primary {
+  height: 4rem; /* 64px */
+  width: auto;
+}
+
+/* Responsive logo sizing - both logos same size */
+@media (max-width: 768px) {
+  .logo-primary {
+    height: 3rem; /* 48px on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-primary {
+    height: 2.5rem; /* 40px on small mobile */
+  }
+}

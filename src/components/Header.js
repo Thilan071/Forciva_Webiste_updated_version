@@ -27,15 +27,15 @@ const Header = () => {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-primary-dark backdrop-blur-md shadow-lg' : 'bg-primary-dark/90 backdrop-blur-sm'
       }`}>
-        <nav className="container mx-auto px-6 py-3">
+        <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <div 
-              className="flex items-center space-x-3 cursor-pointer hover:opacity-90 transition-opacity duration-200"
+              className="flex items-center space-x-4 cursor-pointer hover:opacity-90 transition-opacity duration-200"
               onClick={() => scrollToSection('hero')}
             >
-              <img src={logo} alt="Forciva Logo" className="h-10 w-auto" />
-              <img src={companyName} alt="Forciva" className="h-8 w-auto" />
+              <img src={logo} alt="Forciva Logo" className="logo-primary" />
+              <img src={companyName} alt="Forciva" className="logo-primary" />
             </div>
 
             {/* Navigation Links */}
