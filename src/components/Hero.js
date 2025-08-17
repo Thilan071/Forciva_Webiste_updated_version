@@ -28,7 +28,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
           Innovative Software Solutions for a{' '}
           <span className="text-primary-accent">Digital World</span>
         </h1>
@@ -39,13 +39,6 @@ const Hero = () => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={() => scrollToSection('services')}
-            className="bg-primary-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
-          >
-            Our Services
-          </button>
-          
           <button
             onClick={() => scrollToSection('contact')}
             className="bg-cta-yellow text-primary-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 hover:text-primary-dark transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-cta-yellow"
