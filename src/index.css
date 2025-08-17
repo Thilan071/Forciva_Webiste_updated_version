@@ -296,7 +296,7 @@ nav button:hover {
 
 /* Hover states */
 .hover\:bg-secondary-accent:hover { background-color: var(--secondary-accent); }
-.hover\:bg-yellow-400:hover { background-color: #fbbf24; }
+.hover\:bg-yellow-400:hover { background-color: #D4A73A !important; }
 .hover\:bg-white:hover { background-color: white; }
 .hover\:bg-gray-100:hover { background-color: var(--gray-100); }
 .hover\:bg-primary-accent:hover { background-color: var(--primary-accent); }
@@ -407,6 +407,17 @@ button[style*="backgroundColor: #EDBF43"] {
   color: #1F3440 !important;
   font-weight: 600 !important;
   border: none !important;
+}
+
+/* Enhanced Contact Us button visibility */
+.bg-cta-yellow:hover {
+  background-color: #D4A73A !important;
+  color: #1F3440 !important;
+}
+
+/* Border colors */
+.border-cta-yellow {
+  border-color: #EDBF43 !important;
 }
 
 /* Header buttons specifically */
