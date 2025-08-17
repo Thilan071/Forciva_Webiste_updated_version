@@ -42,18 +42,19 @@ const Hero = () => {
           <button
             onClick={() => scrollToSection('contact')}
             className="bg-cta-yellow text-primary-dark px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 hover:text-primary-dark transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-cta-yellow"
+            style={{
+              backgroundColor: '#EDBF43',
+              color: '#1F3440',
+              border: '2px solid #EDBF43',
+              cursor: 'pointer',
+              outline: 'none',
+              userSelect: 'none',
+              position: 'relative',
+              zIndex: 30
+            }}
           >
             Contact Us
           </button>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="animate-bounce">
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
         </div>
       </div>
     </section>

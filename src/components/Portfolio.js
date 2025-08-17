@@ -73,7 +73,13 @@ const Portfolio = () => {
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-primary-dark/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-white text-primary-dark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+                  <button 
+                    className="text-white border-2 border-white px-6 py-2 rounded-lg font-semibold hover:text-primary-accent hover:border-primary-accent transition-colors duration-200"
+                    style={{
+                      background: 'transparent',
+                      backgroundColor: 'transparent'
+                    }}
+                  >
                     View Details
                   </button>
                 </div>
@@ -103,7 +109,15 @@ const Portfolio = () => {
 
                 {/* Project Link */}
                 <div className="mt-4 pt-4 border-t border-gray-600">
-                  <button className="text-primary-accent hover:text-secondary-accent font-semibold transition-colors duration-200 flex items-center group">
+                  <button 
+                    className="text-primary-accent hover:text-secondary-accent font-semibold transition-colors duration-200 flex items-center group"
+                    style={{
+                      background: 'transparent',
+                      backgroundColor: 'transparent',
+                      border: 'none',
+                      outline: 'none'
+                    }}
+                  >
                     View Case Study
                     <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -117,7 +131,13 @@ const Portfolio = () => {
 
         {/* View All Projects Button */}
         <div className="text-center mt-12">
-          <button className="bg-primary-accent text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary-accent transition-colors duration-300">
+          <button 
+            className="text-primary-accent border-2 border-primary-accent px-8 py-3 rounded-lg font-semibold hover:text-secondary-accent hover:border-secondary-accent transition-colors duration-300"
+            style={{
+              background: 'transparent',
+              backgroundColor: 'transparent'
+            }}
+          >
             View All Projects
           </button>
         </div>

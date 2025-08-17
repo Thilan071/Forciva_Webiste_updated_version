@@ -65,7 +65,15 @@ const Services = () => {
 
               {/* Learn More Link */}
               <div className="mt-6">
-                <button className="text-primary-accent hover:text-secondary-accent font-semibold transition-colors duration-200 flex items-center justify-center mx-auto group">
+                <button 
+                  className="text-primary-accent hover:text-secondary-accent font-semibold transition-colors duration-200 flex items-center justify-center mx-auto group"
+                  style={{
+                    background: 'transparent',
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    outline: 'none'
+                  }}
+                >
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>

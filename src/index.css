@@ -446,17 +446,28 @@ header button[style*="backgroundColor: #EDBF43"] {
 
 /* Company name image - much bigger for better visibility */
 .company-name-primary {
-  height: 8rem; /* 128px - much bigger as requested */
+  height: 12rem; /* 192px - extremely large for maximum visibility */
   width: auto;
 }
 
 /* Header adjustments for larger company name */
+header {
+  overflow: visible; /* Prevent clipping of large images */
+}
+
 header nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
+  header nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   header nav {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -470,7 +481,7 @@ header nav {
   }
   
   .company-name-primary {
-    height: 6.5rem; /* 104px on mobile */
+    height: 9rem; /* 144px on mobile - very large */
   }
 }
 
@@ -480,7 +491,7 @@ header nav {
   }
   
   .company-name-primary {
-    height: 5rem; /* 80px on small mobile */
+    height: 7rem; /* 112px on small mobile - still very visible */
   }
 }
 
@@ -493,11 +504,75 @@ header nav {
   hyphens: auto;
 }
 
+/* Button styling to prevent cursor/arrow artifacts */
+button {
+  outline: none !important;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Specifically for hero Contact Us button */
+#hero button {
+  caret-color: transparent;
+  text-decoration: none;
+}
+
+/* Force all Learn More, View Details, and View Case Study buttons to have no background */
+button:contains("Learn More"),
+a:contains("Learn More"),
+button:contains("View Details"),
+button:contains("View Case Study"),
+a:contains("View Case Study") {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Alternative approach - target specific button patterns */
+[class*="Learn More"],
+[class*="View Details"],
+[class*="View Case Study"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Remove backgrounds from any buttons with these text contents */
+button {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+button.bg-cta-yellow,
+button[style*="backgroundColor"] {
+  background: var(--cta-yellow) !important;
+  background-color: var(--cta-yellow) !important;
+}
+
+/* Desktop hero padding for large header */
+#hero {
+  padding-top: 8rem !important; /* Reduced back to original approach */
+}
+
+/* Tablet view adjustments */
+@media (max-width: 768px) {
+  #hero {
+    padding-top: 7rem !important; /* Reduced for tablet */
+  }
+}
+
 /* Mobile text adjustments for hero title */
 @media (max-width: 640px) {
   #hero {
     align-items: flex-start !important;
-    padding-top: 6rem !important;
+    padding-top: 8rem !important; /* Back to reasonable mobile spacing */
   }
   
   #hero h1 {
@@ -506,11 +581,11 @@ header nav {
     word-break: break-word;
     overflow-wrap: break-word;
     padding: 0 1rem;
-    margin-top: 2rem !important;
+    margin-top: 3rem !important; /* Increased margin */
   }
   
   #hero .relative.z-20 {
-    padding-top: 4rem !important;
+    padding-top: 5rem !important; /* Increased padding */
     margin-top: 2rem;
   }
   
@@ -524,16 +599,16 @@ header nav {
 /* Extra small mobile devices */
 @media (max-width: 480px) {
   #hero {
-    padding-top: 8rem !important;
+    padding-top: 9rem !important; /* Reasonable spacing for small mobile */
   }
   
   #hero .relative.z-20 {
-    padding-top: 6rem !important;
+    padding-top: 7rem !important; /* Increased padding */
     margin-top: 3rem;
   }
   
   #hero h1 {
     font-size: 2rem !important; /* 32px */
-    margin-top: 3rem !important;
+    margin-top: 4rem !important; /* Increased margin */
   }
 }
