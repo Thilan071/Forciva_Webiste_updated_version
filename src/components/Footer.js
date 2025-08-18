@@ -57,12 +57,12 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3" style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
               <li style={{ color: '#25BDB0' }}>
                 <button 
                   onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
-                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200"
+                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200 text-lg"
                   style={{
                     background: 'transparent',
                     backgroundColor: 'transparent',
@@ -77,7 +77,7 @@ const Footer = () => {
               <li style={{ color: '#25BDB0' }}>
                 <button 
                   onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200"
+                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200 text-lg"
                   style={{
                     background: 'transparent',
                     backgroundColor: 'transparent',
@@ -92,7 +92,7 @@ const Footer = () => {
               <li style={{ color: '#25BDB0' }}>
                 <button 
                   onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
-                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200"
+                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200 text-lg"
                   style={{
                     background: 'transparent',
                     backgroundColor: 'transparent',
@@ -107,7 +107,7 @@ const Footer = () => {
               <li style={{ color: '#25BDB0' }}>
                 <button 
                   onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200"
+                  className="text-primary-accent hover:text-secondary-accent transition-colors duration-200 text-lg"
                   style={{
                     background: 'transparent',
                     backgroundColor: 'transparent',
@@ -124,25 +124,25 @@ const Footer = () => {
 
           {/* Legal Links */}
           <div>
-            <h4 className="text-white font-semibold mb-6">Legal</h4>
+            <h4 className="text-white font-semibold mb-6 text-lg">Legal</h4>
             <ul className="space-y-3" style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
               <li style={{ color: 'white' }}>
-                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200 text-lg">
                   Privacy Policy
                 </a>
               </li>
               <li style={{ color: 'white' }}>
-                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200 text-lg">
                   Terms of Service
                 </a>
               </li>
               <li style={{ color: 'white' }}>
-                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200 text-lg">
                   Cookie Policy
                 </a>
               </li>
               <li style={{ color: 'white' }}>
-                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200">
+                <a href="#" className="text-gray-300 hover:text-primary-accent transition-colors duration-200 text-lg">
                   Accessibility
                 </a>
               </li>

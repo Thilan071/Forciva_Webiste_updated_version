@@ -21,9 +21,18 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Create mailto link for contact@forciva.com
+    const subject = encodeURIComponent(formData.subject || 'Project Inquiry');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:contact@forciva.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form after a short delay
     setTimeout(() => {
-      alert('Thank you for your message! We\'ll get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
@@ -55,56 +64,41 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="bg-primary-accent p-3 rounded-lg">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Email</div>
-                  <div className="text-gray-300">hello@forciva.com</div>
-                </div>
-              </div>
+            {/* Contact Icons */}
+            <div className="flex space-x-6">
+              {/* Email Icon */}
+              <button
+                onClick={() => window.location.href = 'mailto:contact@forciva.com'}
+                className="bg-primary-accent/10 hover:bg-primary-accent/20 p-4 rounded-lg transition-colors duration-200 group"
+                title="Send us an email"
+              >
+                <svg className="w-6 h-6 hover:opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#25BDB0' }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </button>
 
-              <div className="flex items-center space-x-4">
-                <div className="bg-primary-accent p-3 rounded-lg">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <div className="text-gray-300">+1 (555) 123-4567</div>
-                </div>
-              </div>
+              {/* Phone Icon */}
+              <button
+                onClick={() => window.location.href = 'tel:+1234567890'}
+                className="bg-primary-accent/10 hover:bg-primary-accent/20 p-4 rounded-lg transition-colors duration-200 group"
+                title="Call us"
+              >
+                <svg className="w-6 h-6 hover:opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#25BDB0' }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </button>
 
-              <div className="flex items-center space-x-4">
-                <div className="bg-primary-accent p-3 rounded-lg">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Location</div>
-                  <div className="text-gray-300">
-                    <a 
-                      href="https://www.google.com/maps/search/Meydan+Grandstand,+6th+floor,+Meydan+Road,+Nad+Al+Sheba,+Dubai,+UAE/@25.1576271,55.2958298,398m/data=!3m1!1e3?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-accent hover:text-secondary-accent transition-colors duration-200"
-                      style={{ color: '#25BDB0', textDecoration: 'none' }}
-                    >
-                      Meydan Grandstand, 6th floor,<br />
-                      Meydan Road, Nad Al Sheba,<br />
-                      Dubai, UAE
-                    </a>
-                  </div>
-                </div>
-              </div>
+              {/* Location Icon */}
+              <button
+                onClick={() => window.open('https://maps.google.com/?q=Forciva+Dubai+UAE', '_blank')}
+                className="bg-primary-accent/10 hover:bg-primary-accent/20 p-4 rounded-lg transition-colors duration-200 group"
+                title="Find us on Google Maps"
+              >
+                <svg className="w-6 h-6 hover:opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#25BDB0' }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </button>
             </div>
           </div>
 
@@ -180,7 +174,11 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-primary-accent text-white py-4 rounded-lg font-semibold hover:bg-secondary-accent transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-cta-yellow text-primary-dark py-4 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                style={{
+                  backgroundColor: '#EDBF43',
+                  color: '#1F3440'
+                }}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
